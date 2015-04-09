@@ -11,7 +11,7 @@
         <field name="ACTION">FLASH</field>
         <value name="LED">
           <block type="math_number" id="156">
-            <field name="NUM">4</field>
+            <field name="NUM">1</field>
           </block>
         </value>
         <next>
@@ -19,16 +19,46 @@
             <field name="ACTION">FLASH</field>
             <value name="LED">
               <block type="math_number" id="163">
-                <field name="NUM">5</field>
+                <field name="NUM">2</field>
               </block>
             </value>
             <next>
-              <block type="robot_delay" id="143" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="170">
-                    <field name="NUM">100</field>
+              <block type="led_select" id="185" inline="true">
+                <field name="ACTION">ON</field>
+                <value name="LED">
+                  <block type="math_number" id="227">
+                    <field name="NUM">3</field>
                   </block>
                 </value>
+                <next>
+                  <block type="led_select" id="211" inline="true">
+                    <field name="ACTION">ON</field>
+                    <value name="LED">
+                      <block type="math_number" id="234">
+                        <field name="NUM">4</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="led_select" id="220" inline="true">
+                        <field name="ACTION">ON</field>
+                        <value name="LED">
+                          <block type="math_number" id="241">
+                            <field name="NUM">5</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="robot_delay" id="143" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="170">
+                                <field name="NUM">100</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
